@@ -1,0 +1,8 @@
+{
+    "Connect":{
+        "token":"Discord Bot Token"
+    },
+    "Image":{
+        "Path":"Image/",
+        "Latest":"None"
+    }
