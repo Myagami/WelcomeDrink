@@ -7,6 +7,7 @@ var config = JSON.parse(fs.readFileSync("DiscordConfig.json","utf8")) ;
 const client = new Discord.Client();    
 const Token = config["Connect"]["token"];
 const Path = config["Image"]["Path"];
+const Debuger = config["Connect"]["Debug"];
 var latest = config["Image"]["Latest"];
 
 console.log(Token)
@@ -27,13 +28,12 @@ client.on("message",message => {
     let channel = message.channel;
     let author = message.author.username;
 	//msgを送信します
-		
-	if(msgc === 'ようこそ'){//keyword file reload
+	if(msgc === 'ようこそ' && (message.author.bot || message.author.username === Debuger)){//keyword file reload
 		var s_image = image[Math.floor(Math.random() * (image.length))]
 		message.reply("ようこそ",{files:['Image/'+ s_image]})
 		.then(message => console.log("youkoso"))
 		.catch(console.error);
-		latest = s_image 
+		lnnnatest = s_image 
 		return;			
 	}else if(msgc === '!画像追加'){
 		image = fs.readdirSync(Path)	
