@@ -1,6 +1,7 @@
 {
     "Connect":{
-        "token":"Discord Bot Token"
+        "token":"Discord Bot Token",
+        "Debug":"Debug and AdminUser"
     },
     "Image":{
         "Path":"Image/",
