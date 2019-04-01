@@ -28,7 +28,7 @@ client.on("message",message => {
     let channel = message.channel;
     let author = message.author.username;
 	//msgを送信します
-	if((msgc.indexOf('ようこそ') !== -1 && msgc.indexOf('Geek-Space') !== -1) && ((message.author.bot && message.author.username === 'MEE6') || message.author.username === Debuger)){//keyword file reload
+	if((msgc.indexOf('ようこそ') !== -1 && msgc.indexOf('Geek-Space') !== -1) && ((message.author.bot && message.author.username === 'MEE6') || message.author.id === Debuger)){//keyword file reload
 		var s_image = image[Math.floor(Math.random() * (image.length))]
 		message.channel.send("",{files:['Image/'+ s_image]})
 		.then(message => console.log("youkoso"))
