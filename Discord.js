@@ -31,11 +31,12 @@ client.on("message",message => {
 	if((msgc.indexOf('ようこそ') !== -1 && msgc.indexOf('Geek-Space') !== -1) && ((message.author.bot && message.author.username === 'MEE6') || message.author.id === Debuger)){//keyword file reload
 		var s_image = image[Math.floor(Math.random() * (image.length))]
 		console.log("Catch New User")
-		sleep.sleep(300)
-		message.channel.send("",{files:['Image/'+ s_image]})
-		.then(message => console.log("youkoso"))
-		.catch(console.error);
-		lnnnatest = s_image 
+		setTimeout(function(){
+			message.channel.send("",{files:['Image/'+ s_image]})
+			.then(message => console.log("youkoso"))
+			.catch(console.error);
+			lnnnatest = s_image ;}
+			,300000) ; 
 		return;	
 	}else if(msgc === '!画像追加'){
 		image = fs.readdirSync(Path)	
