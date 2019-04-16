@@ -23,8 +23,8 @@ client.on("ready", ()=> {
     console.log("ready...");
 });
 
-client.on("error",()=> {
-	console.log("error") ;
+client.on("error",(e)=> {
+	console.error(e) ;
 });
 
 client.on("message",message => {
