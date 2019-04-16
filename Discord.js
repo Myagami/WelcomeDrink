@@ -23,6 +23,10 @@ client.on("ready", ()=> {
     console.log("ready...");
 });
 
+client.on("error",()=> {
+	console.log("error") ;
+});
+
 client.on("message",message => {
    let msgc = message.content;
     let channel = message.channel;
@@ -36,7 +40,7 @@ client.on("message",message => {
 			.then(message => console.log("youkoso"))
 			.catch(console.error);
 			lnnnatest = s_image ;}
-			,300000) ; 
+			,3000) ; 
 		return;	
 	}else if(msgc === '!画像追加'){
 		image = fs.readdirSync(Path)	
