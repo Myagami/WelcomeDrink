@@ -40,7 +40,7 @@ client.on("message",message => {
 			.then(message => console.log("youkoso"))
 			.catch(console.error);
 			lnnnatest = s_image ;}
-			,3000) ; 
+			,300000) ; 
 		return;	
 	}else if(msgc === '!画像追加'){
 		image = fs.readdirSync(Path)	
